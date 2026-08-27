@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Fleet.Battery
+{
+    public class Resolver
+    {
+    }
+}

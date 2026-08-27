@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Fleet.Trips
+{
+    public class Resolver
+    {
+    }
+}

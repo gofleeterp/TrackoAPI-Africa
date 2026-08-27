@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BFC8317-571E-45E9-B52D-E930EDF0D1A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrackoApi.Data.Mapping</RootNamespace>
+    <AssemblyName>TrackoApi.Data.Mapping</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OnPremiseRelease|AnyCPU'">
+    <OutputPath>bin\OnPremiseRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OnPremiseDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OnPremiseDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AMS\AccountsGroupDbMapping.cs" />
+    <Compile Include="AMS\ContactBookDbMapping.cs" />
+    <Compile Include="AMS\GSTConfigurationDbMapping.cs" />
+    <Compile Include="AMS\LedgerOfficeDbMapping.cs" />
+    <Compile Include="AMS\VoucherTypeGroupDbMapping.cs" />
+    <Compile Include="BMS\CNBillLogArchiveDbMapping.cs" />
+    <Compile Include="BMS\CNBillLogDbMapping.cs" />
+    <Compile Include="BMS\HMArrivalDbMapping.cs" />
+    <Compile Include="BMS\MaterialGroupDbMapping.cs" />
+    <Compile Include="BMS\SalesLogDbMapping.cs" />
+    <Compile Include="BMS\CNBillMasterDbMapping.cs" />
+    <Compile Include="BMS\CNBillPaymentLogDbMapping.cs" />
+    <Compile Include="BMS\CNDTSStatusLogDbMapping.cs" />
+    <Compile Include="BMS\CNMasterDbMapping.cs" />
+    <Compile Include="BMS\CNMultiMaterialDbMapping.cs" />
+    <Compile Include="BMS\CNRateContractLogDbMapping.cs" />
+    <Compile Include="BMS\CNBillPaymentDbMapping.cs" />
+    <Compile Include="BMS\CNStockMMLogDbMapping.cs" />
+    <Compile Include="BMS\HireVehicleMasterDbMapping.cs" />
+    <Compile Include="CRM\ServiceMasterDbMapping.cs" />
+    <Compile Include="FMS\CardMasterDbMapping.cs" />
+    <Compile Include="FMS\GeneralTransactionDbMapping.cs" />
+    <Compile Include="FMS\GPS\GPSKmLogDbMapping.cs" />
+    <Compile Include="FMS\PartyRouteTimeDbMapping.cs" />
+    <Compile Include="BMS\TaxServiceTypeDbMapping.cs" />
+    <Compile Include="BMS\TaxRateMasterDbMapping.cs" />
+    <Compile Include="BMS\CNRateContractDbMapping.cs" />
+    <Compile Include="FMS\GeneralExpenseDbMapping.cs" />
+    <Compile Include="FMS\GPS\GpsEndPointDbMapping.cs" />
+    <Compile Include="FMS\LoanLogDbMapping.cs" />
+    <Compile Include="FMS\LoanDbMapping.cs" />
+    <Compile Include="FMS\PurchaseOrderLogDbMapping.cs" />
+    <Compile Include="FMS\GenericRatechartDbMapping.cs" />
+    <Compile Include="FMS\PurchaseRequisitionDbMapping.cs" />
+    <Compile Include="FMS\PurchaseRequisitionLogDbMapping.cs" />
+    <Compile Include="FMS\TripExpenseBudgetDbMapping.cs" />
+    <Compile Include="FMS\HSAdvanceDbMapping.cs" />
+    <Compile Include="FMS\SpareBinMapDbMapping.cs" />
+    <Compile Include="FMS\SpareInventoryLevelDbMapping.cs" />
+    <Compile Include="FMS\StoreBINMasterDbMapping.cs" />
+    <Compile Include="FMS\FleetGatePassDbMapping.cs" />
+    <Compile Include="FMS\FuelRateLogDbMapping.cs" />
+    <Compile Include="FMS\ORMAuditLogMapping.cs" />
+    <Compile Include="FMS\ORMLogDbMapping.cs" />
+    <Compile Include="FMS\VehicleAccidentEstimateDbMapping.cs" />
+    <Compile Include="FMS\VehicleAccidentClaimDbMapping.cs" />
+    <Compile Include="FMS\OfficeVehicleMapDbMapping.cs" />
+    <Compile Include="FMS\RouteVehicleTypeDbMapping.cs" />
+    <Compile Include="FMS\VehicleCardMappingDbMapping.cs" />
+    <Compile Include="Global\APLConfigDbMapping.cs" />
+    <Compile Include="Global\APLLogAnxDbMapping.cs" />
+    <Compile Include="Global\APLLogAnxLevelDbMapping.cs" />
+    <Compile Include="Global\APLLogDbMapping.cs" />
+    <Compile Include="Global\CurrencyConversionDbMapping.cs" />
+    <Compile Include="Global\APLTypeDbMapping.cs" />
+    <Compile Include="Global\DTS\DTSStatusMappingDbMapping.cs" />
+    <Compile Include="Global\DTS\DTSStatusDbMapping.cs" />
+    <Compile Include="FMS\VTSStatusLogDbMapping.cs" />
+    <Compile Include="Global\ApiFileDbMapping.cs" />
+    <Compile Include="Global\JobLogDbMapping.cs" />
+    <Compile Include="Global\ScheduleLogDbMapping.cs" />
+    <Compile Include="Global\PrintFormatDbMapping.cs" />
+    <Compile Include="Global\ReportCustomizationDbMapping.cs" />
+    <Compile Include="Global\ReportRequestPoolDbMapping.cs" />
+    <Compile Include="Global\TransactionSupportLogDbMapping.cs" />
+    <Compile Include="Global\TripScheduleConfigDbMapping.cs" />
+    <Compile Include="Infrastructure\ApiUserDbMapping.cs" />
+    <Compile Include="FMS\BatteryBrandDbMapping.cs" />
+    <Compile Include="BMS\CNChallanDbMapping.cs" />
+    <Compile Include="FMS\BrandMasterDbMapping.cs" />
+    <Compile Include="ConfigureDbMappings.cs" />
+    <Compile Include="Global\CityMasterDbMapping.cs" />
+    <Compile Include="Global\ConstantValueDbMapping.cs" />
+    <Compile Include="AMS\VoucherDbMappings.cs" />
+    <Compile Include="AMS\VoucherDetailReferenceDbMapping.cs" />
+    <Compile Include="FMS\DriverVehicleDbMapping.cs" />
+    <Compile Include="FMS\DriverNextStatusDbMapping.cs" />
+    <Compile Include="Global\GenericMasterDbMapping.cs" />
+    <Compile Include="Global\ObjectCategoryDbMapping.cs" />
+    <Compile Include="Global\StationeryBookDbMapping.cs" />
+    <Compile Include="Global\StationeryBookLogArchiveDbMapping.cs" />
+    <Compile Include="Global\StationeryBookLogDbMapping.cs" />
+    <Compile Include="AMS\LedgerRoleDbMapping.cs" />
+    <Compile Include="Global\ModuleDbMapping.cs" />
+    <Compile Include="Global\OfficeMasterDbMapping.cs" />
+    <Compile Include="FMS\DriverIncidentLogDbMapping.cs" />
+    <Compile Include="FMS\DriverTrainingLogDbMapping.cs" />
+    <Compile Include="FMS\DueMasterDbMapping.cs" />
+    <Compile Include="BMS\ChallanMasterDbMapping.cs" />
+    <Compile Include="BMS\MaterialMasterDbMapping.cs" />
+    <Compile Include="FMS\TripAdvanceLogDbMapping.cs" />
+    <Compile Include="Global\TollRateLogDbMapping.cs" />
+    <Compile Include="Global\TollMasterDbMapping.cs" />
+    <Compile Include="FMS\SpareAliasDbMapping.cs" />
+    <Compile Include="Global\RouteTollMapDbMapping.cs" />
+    <Compile Include="FMS\PurchaseOrderDbMapping.cs" />
+    <Compile Include="FMS\ExpenseMasterDbMapping.cs" />
+    <Compile Include="FMS\DueTransactionLogDbMapping.cs" />
+    <Compile Include="FMS\DueInsuranceLogDbMapping.cs" />
+    <Compile Include="FMS\DriverGuarantorDbMapping.cs" />
+    <Compile Include="FMS\DriverMasterDbMapping.cs" />
+    <Compile Include="FMS\DriverPaymentDbMapping.cs" />
+    <Compile Include="FMS\DriverRelativeDbMapping.cs" />
+    <Compile Include="AMS\LedgerDbMapping.cs" />
+    <Compile Include="FMS\PMMasterDbMapping.cs" />
+    <Compile Include="Infrastructure\EventStorageDbMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Global\RouteMasterDbMapping.cs" />
+    <Compile Include="FMS\SpareFPositionDbMapping.cs" />
+    <Compile Include="FMS\SpareLogDbMapping.cs" />
+    <Compile Include="FMS\SpareMasterDbMapping.cs" />
+    <Compile Include="FMS\BatteryCheckDbMapping.cs" />
+    <Compile Include="FMS\BatteryMasterDbMapping.cs" />
+    <Compile Include="FMS\BatteryLogDbMapping.cs" />
+    <Compile Include="FMS\VehiclePreventiveLogDbMapping.cs" />
+    <Compile Include="FMS\TyreLogDbMapping.cs" />
+    <Compile Include="FMS\TyreCheckDbMapping.cs" />
+    <Compile Include="FMS\TyreMasterDbMapping.cs" />
+    <Compile Include="FMS\TyreRubberTypeDbMapping.cs" />
+    <Compile Include="Global\UnitConverterDbMapping.cs" />
+    <Compile Include="FMS\VehicleBudgetDbMapping.cs" />
+    <Compile Include="FMS\TripExpenseLogDbMapping.cs" />
+    <Compile Include="FMS\VehicleFuelBudgetDbMapping.cs" />
+    <Compile Include="FMS\VehicleMonthlyBudgetDbMapping.cs" />
+    <Compile Include="FMS\VehicleMovementLogDbMapping.cs" />
+    <Compile Include="FMS\VehicleAccessoryLogDbMapping.cs" />
+    <Compile Include="FMS\VehicleDueMappingDbMapping.cs" />
+    <Compile Include="FMS\VehicleMasterDbMapping.cs" />
+    <Compile Include="FMS\VehicleModelDbMapping.cs" />
+    <Compile Include="FMS\VehicleOwnerDbMapping.cs" />
+    <Compile Include="FMS\VehicleMovementLogPickupDropDbMapping.cs" />
+    <Compile Include="FMS\VehicleTripSettlementDbMapping.cs" />
+    <Compile Include="FMS\VehicleTrailorDbMapping.cs" />
+    <Compile Include="Reporting\CustomReportDbMapping.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CronExpressionDescriptor\CronExpressionDescriptor.csproj">
+      <Project>{E2B2E523-B569-4878-A11A-81BAD27C06E8}</Project>
+      <Name>CronExpressionDescriptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reporting\TrackoAPI.Reporting.Models\TrackoAPI.Reporting.Models.csproj">
+      <Project>{af22c9a1-b573-456b-862a-60cd31a7ce07}</Project>
+      <Name>TrackoAPI.Reporting.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Models.Base\TrackoAPI.Models.Base.csproj">
+      <Project>{b5450530-0097-4b8e-85e0-72419f709e72}</Project>
+      <Name>TrackoAPI.Models.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Models.Shared\TrackoAPI.Models.Shared.csproj">
+      <Project>{0102FE2F-CFC7-4E22-A7D0-78F4B687D2D8}</Project>
+      <Name>TrackoAPI.Models.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoApi.Models\TrackoApi.Models.csproj">
+      <Project>{A821E25E-1255-4F2F-A5A8-BDFFBEB7D831}</Project>
+      <Name>TrackoApi.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.ViewModels\TrackoAPI.ViewModels.csproj">
+      <Project>{6CD3A8BA-E883-4718-A88D-310F0A1294CD}</Project>
+      <Name>TrackoAPI.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

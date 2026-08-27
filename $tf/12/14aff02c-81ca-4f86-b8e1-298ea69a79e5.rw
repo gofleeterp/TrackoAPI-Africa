@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Fleet.Dues
+{
+    public class Resolver
+    {
+    }
+}

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="http://bajajauto.co.in/TransAPI/TransportersDataResponse" name="TransportersDataResponse_OUT" targetNamespace="http://bajajauto.co.in/TransAPI/TransportersDataResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_TransportersDataResponse_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://bajajauto.co.in/TransAPI/TransportersDataResponse" targetNamespace="http://bajajauto.co.in/TransAPI/TransportersDataResponse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="TransportersDataResponse" type="p1:TransportersDataResponse" />
+      <xsd:complexType name="TransportersDataResponse">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">a8c1ef38bab411eac81e0000003c839a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ZSD_DAM_DTL_STG">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">d09c9e8282fc11ea9edd588a5a226c21</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Records">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">d09c6d1f82fc11eaca1b588a5a226c21</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="TGUID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09c557c82fc11ea85c0588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09c557d82fc11ea86b7588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09c557e82fc11eab806588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_BATCH" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09c6d1d82fc11eaa618588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_USER" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09c6d1e82fc11eaacf1588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SGUID" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ZSD_DEL_DET_STG">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">d09ce0e382fc11eaa588588a5a226c21</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Records">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">d09cb07a82fc11ea8b52588a5a226c21</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="TGUID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09c9e8382fc11eac6bd588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09cb07682fc11eaae86588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09cb07782fc11eaa829588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_BATCH" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09cb07882fc11ea9e7e588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_USER" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09cb07982fc11eaa9d6588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SGUID" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ZSD_DTAG_STG">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">d09d44b882fc11eacfdd588a5a226c21</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Records">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">d09d119082fc11eab2b4588a5a226c21</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="TGUID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09ce0e482fc11eabda2588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09ce0e582fc11eacd03588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d118d82fc11eaa7e1588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_BATCH" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d118e82fc11eaa65d588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_USER" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d118f82fc11ea9e3c588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SGUID" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ZSD_FRT_DTL_STG">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">d09d4ec482fc11ea9ff3588a5a226c21</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Records">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">d09d4ec382fc11eac3a0588a5a226c21</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="TGUID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d44b982fc11eac31a588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d44ba82fc11eabd42588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d44bb82fc11ea9df2588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_BATCH" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d44bc82fc11ea91b2588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_USER" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d44bd82fc11eaa47a588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SGUID" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ZSD_LR_DET_STG">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">d09dba2182fc11ea970b588a5a226c21</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Records">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">d09d8a4382fc11ea9a15588a5a226c21</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="TGUID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d8a3e82fc11eac470588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d8a3f82fc11ea8a6f588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d8a4082fc11ea8df0588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_BATCH" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d8a4182fc11eab0eb588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_USER" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09d8a4282fc11ea88c3588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SGUID" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ZSD_SRT_DTL_STG">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">d09dd72d82fc11eaad03588a5a226c21</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Records">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">d09dd72c82fc11eab6cf588a5a226c21</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="TGUID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09dba2282fc11ea8aa9588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09dba2382fc11eab98f588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09dba2482fc11ea8ed3588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_BATCH" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09dd72a82fc11eab358588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_USER" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">d09dd72b82fc11ea9c42588a5a226c21</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SGUID" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ZSD_LR_HDR_DTL">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a7df4f1bbab411ea906d34e6d7559199</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="Records">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a7df4f1abab411eaaa5a34e6d7559199</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="TGUID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">a7df4f15bab411ea841a34e6d7559199</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">a7df4f16bab411eab9b934e6d7559199</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">a7df4f17bab411eaa1b934e6d7559199</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_BATCH" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">a7df4f18bab411eaa06434e6d7559199</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSFER_USER" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">a7df4f19bab411eaada534e6d7559199</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SGUID" type="xsd:string" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TransportersDataResponse">
+    <wsdl:documentation />
+    <wsdl:part name="TransportersDataResponse" element="p1:TransportersDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TransportersDataResponse_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="TransportersDataResponse_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_TransportersDataResponse_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:TransportersDataResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TransportersDataResponse_OUTBinding" type="p1:TransportersDataResponse_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="TransportersDataResponse_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransportersDataResponse_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:TransportersDataResponse_OUTBinding">
+      <address location="http://agni.bajajauto.co.in:7772/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_TransAPI&amp;receiverParty=&amp;receiverService=&amp;interface=TransportersDataResponse_OUT&amp;interfaceNamespace=http%3A%2F%2Fbajajauto.co.in%2FTransAPI%2FTransportersDataResponse" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:TransportersDataResponse_OUTBinding">
+      <address location="https://poqas.bajajauto.co.in:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_TransAPI&amp;receiverParty=&amp;receiverService=&amp;interface=TransportersDataResponse_OUT&amp;interfaceNamespace=http%3A%2F%2Fbajajauto.co.in%2FTransAPI%2FTransportersDataResponse" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" >
+
+  <!--<PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>-->
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>%24/GOF.Server.SaaS/TrackoAPI/Dev-Downgrade/Frameworks/Repository.DatabaseCLR</SccProjectName>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <SccAuxPath>https://iwlt.visualstudio.com</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>GoFleetCLR</RootNamespace>
+    <AssemblyName>GoFleetCLR</AssemblyName>
+  </PropertyGroup>  
+  
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+</Project>

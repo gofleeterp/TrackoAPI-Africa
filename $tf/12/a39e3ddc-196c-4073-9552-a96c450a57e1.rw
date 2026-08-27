@@ -1,0 +1,7 @@
+﻿namespace IWLT.Utilities.Controls
+{
+    public enum BaseAutoCompleteTypeEnum
+    {
+        Default=0
+    }
+}

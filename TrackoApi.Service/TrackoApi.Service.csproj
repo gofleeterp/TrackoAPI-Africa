@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A12D8A53-AC89-4DF5-B39E-4AEDC3763BA6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrackoApi.Service</RootNamespace>
+    <AssemblyName>TrackoApi.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OnPremiseRelease|AnyCPU'">
+    <OutputPath>bin\OnPremiseRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OnPremiseDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OnPremiseDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.EntityFramework, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.EntityFramework.2.0.90\lib\net461\Dapper.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Console, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Console.1.4.2\lib\net45\Hangfire.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.7.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.7.11\lib\net46\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit, Version=1.1.15.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.1.1.15\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.7.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.7.0\lib\net47\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MimeKit, Version=4.11.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.4.11.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq, Version=3.2.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.3.2.0\lib\net451\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Stubble.Compilation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stubble.Compilation.1.3.4\lib\net45\Stubble.Compilation.dll</HintPath>
+    </Reference>
+    <Reference Include="Stubble.Core, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stubble.Core.1.3.4\lib\net45\Stubble.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMS\BillSubmissionService.cs" />
+    <Compile Include="BMS\CNBillLogArchiveService.cs" />
+    <Compile Include="BMS\GenericRatechartService.cs" />
+    <Compile Include="BMS\CNExtraInfoService.cs" />
+    <Compile Include="BMS\HMArrivalService.cs" />
+    <Compile Include="BMS\MaterialPlantMappingService.cs" />
+    <Compile Include="BMS\SalesLogService.cs" />
+    <Compile Include="BMS\CNDTSStatusLogService.cs" />
+    <Compile Include="BMS\CNDTSStatusService.cs" />
+    <Compile Include="BMS\CNBillLogService.cs" />
+    <Compile Include="BMS\CNBillPaymentLogService.cs" />
+    <Compile Include="BMS\CNStockMMLogService.cs" />
+    <Compile Include="BMS\CNStockLogService.cs" />
+    <Compile Include="BMS\CNRateContractLogService.cs" />
+    <Compile Include="BMS\CNRateContractService.cs" />
+    <Compile Include="BMS\CNBillService.cs" />
+    <Compile Include="BMS\CNBillPaymentService.cs" />
+    <Compile Include="BMS\HireVehicleMasterService.cs" />
+    <Compile Include="BMS\MaterialDispatchOrderService.cs" />
+    <Compile Include="BMS\MultiMaterialMasterService.cs" />
+    <Compile Include="Connected Services\Bajaj.Data.Response\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Bajaj.Data\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\GSTConfigurationService.cs" />
+    <Compile Include="Finance\LedgerOfficeService.cs" />
+    <Compile Include="FMS\CardMasterService.cs" />
+    <Compile Include="FMS\GPS\GPSKmLogService.cs" />
+    <Compile Include="FMS\PartyRouteTimeService.cs" />
+    <Compile Include="BMS\TaxServiceTypeService.cs" />
+    <Compile Include="BMS\TaxRateMasterService.cs" />
+    <Compile Include="BMS\LoadTypeService.cs" />
+    <Compile Include="BMS\CNBillNatureService.cs" />
+    <Compile Include="BMS\MaterialGroupService.cs" />
+    <Compile Include="Finance\ContactService.cs" />
+    <Compile Include="Finance\LedgerRoleService.cs" />
+    <Compile Include="Finance\VoucherAuditLogService.cs" />
+    <Compile Include="Finance\VoucherTypeGroupMappingService.cs" />
+    <Compile Include="FMS\GeneralExpenseLogsService.cs" />
+    <Compile Include="FMS\GPS\GpsEndPointService.cs" />
+    <Compile Include="FMS\LoanLogService.cs" />
+    <Compile Include="FMS\OfficeVehicleMapService.cs" />
+    <Compile Include="FMS\PurchaseOrderLogService.cs" />
+    <Compile Include="FMS\LoanService.cs" />
+    <Compile Include="FMS\PurchaseRequisitionLogService.cs" />
+    <Compile Include="FMS\PurchaseRequisitionService.cs" />
+    <Compile Include="FMS\RouteVehicleTypeService.cs" />
+    <Compile Include="FMS\TyreLogService.cs" />
+    <Compile Include="FMS\TyreMillageLogService.cs" />
+    <Compile Include="FMS\BatteryBrandService.cs" />
+    <Compile Include="FMS\TripExpenseBudgetService.cs" />
+    <Compile Include="FMS\HSAdvanceService.cs" />
+    <Compile Include="FMS\FleetGatePassService.cs" />
+    <Compile Include="FMS\BatteryCheckService.cs" />
+    <Compile Include="FMS\BatteryLogService.cs" />
+    <Compile Include="FMS\BatteryMasterService.cs" />
+    <Compile Include="FMS\DriverNextStatusMappingService.cs" />
+    <Compile Include="FMS\DriverVehicleMappingService.cs" />
+    <Compile Include="FMS\FuelRateLogService.cs" />
+    <Compile Include="FMS\ORMAuditLogService.cs" />
+    <Compile Include="FMS\ORMLogService.cs" />
+    <Compile Include="FMS\SpareBinMappingService.cs" />
+    <Compile Include="FMS\StoreBINMasterService.cs" />
+    <Compile Include="FMS\SpareInventoryLevelService.cs" />
+    <Compile Include="FMS\VehicleAccidentEstimateService.cs" />
+    <Compile Include="FMS\VehicleAccessoryLogService.cs" />
+    <Compile Include="FMS\VehicleTrailorMappingService.cs" />
+    <Compile Include="FMS\VehicleCardMappingService.cs" />
+    <Compile Include="FMS\VTSNextStatusMappingService.cs" />
+    <Compile Include="FMS\VehicleAccidentClaimService.cs" />
+    <Compile Include="FMS\VTSStatusLogsubService.cs" />
+    <Compile Include="FMS\VTSStatusLogService.cs" />
+    <Compile Include="FMS\VTSStatusDefinitionService.cs" />
+    <Compile Include="FMS\RepairLabourLogService.cs" />
+    <Compile Include="FMS\VehicleRepairJobService.cs" />
+    <Compile Include="FMS\VehiclePMService.cs" />
+    <Compile Include="FMS\PMScheduleService.cs" />
+    <Compile Include="FMS\UnitMasterService.cs" />
+    <Compile Include="Global\ApiTransactionPubSubStoreService.cs" />
+    <Compile Include="Global\APLConfigService.cs" />
+    <Compile Include="Global\APLLogAnxLevelService.cs" />
+    <Compile Include="Global\APLLogAnxService.cs" />
+    <Compile Include="Global\TPTRequestPoolService.cs" />
+    <Compile Include="Global\TransactionSupportLogService.cs" />
+    <Compile Include="Global\APLLogService.cs" />
+    <Compile Include="Global\APLTypeService.cs" />
+    <Compile Include="Global\AuthTokenRefreshService.cs" />
+    <Compile Include="Global\Bajaj.Data.ClientServie.cs" />
+    <Compile Include="Global\CurrencyConversionService.cs" />
+    <Compile Include="Global\EntityTable.cs" />
+    <Compile Include="Global\EWayBillService.cs" />
+    <Compile Include="Global\Extentions.cs" />
+    <Compile Include="Global\FileUploadNatureService.cs" />
+    <Compile Include="Global\DocumetsService.cs" />
+    <Compile Include="Global\HangfireJobProcessor.cs" />
+    <Compile Include="Global\MessageAddressService.cs" />
+    <Compile Include="Global\JobLogService.cs" />
+    <Compile Include="Global\LedgerPrintFormatService.cs" />
+    <Compile Include="Global\ReportCustomizationService.cs" />
+    <Compile Include="Global\RolePermissionService.cs" />
+    <Compile Include="Global\ReportParameterService.cs" />
+    <Compile Include="Global\RouteWayPointService.cs" />
+    <Compile Include="Global\ScheduleLogService.cs" />
+    <Compile Include="Global\SMSRepository.cs" />
+    <Compile Include="Global\StationeryBookLogArchiveService.cs" />
+    <Compile Include="Global\StationeryBookLogService.cs" />
+    <Compile Include="Global\StationeryBookService.cs" />
+    <Compile Include="Global\PrintFormatService.cs" />
+    <Compile Include="Global\ViewFieldBookMapService.cs" />
+    <Compile Include="Global\ViewModuleService.cs" />
+    <Compile Include="Global\WorkFlowScriptService.cs" />
+    <Compile Include="Global\ViewService.cs" />
+    <Compile Include="Global\ViewFieldService.cs" />
+    <Compile Include="Global\ObjectCategoryService.cs" />
+    <Compile Include="Global\ObjectClassMapService.cs" />
+    <Compile Include="Global\ObjectClassService.cs" />
+    <Compile Include="Global\PostalAddressService.cs" />
+    <Compile Include="Global\RecordAccessLogService.cs" />
+    <Compile Include="Global\UserResourceAccessService.cs" />
+    <Compile Include="Finance\AccountGroupService.cs" />
+    <Compile Include="FMS\BrandMasterService.cs" />
+    <Compile Include="Global\CityMasterService.cs" />
+    <Compile Include="BMS\ChallanService.cs" />
+    <Compile Include="BMS\CNChallanService.cs" />
+    <Compile Include="Global\ConstantValueService.cs" />
+    <Compile Include="Global\ConstantTypeService.cs" />
+    <Compile Include="FMS\DriverIncidentLogService.cs" />
+    <Compile Include="FMS\DriverGuarantorService.cs" />
+    <Compile Include="FMS\DriverMasterService.cs" />
+    <Compile Include="FMS\DriverPaymentService.cs" />
+    <Compile Include="FMS\DriverRelativeService.cs" />
+    <Compile Include="FMS\DriverTrainingLogService.cs" />
+    <Compile Include="FMS\DueInsuranceLogService.cs" />
+    <Compile Include="BMS\ConsignmentsService.cs" />
+    <Compile Include="BMS\MaterialMasterService.cs" />
+    <Compile Include="FMS\DueMasterService.cs" />
+    <Compile Include="FMS\DueTransactionLogService.cs" />
+    <Compile Include="FMS\ExpenseMasterService.cs" />
+    <Compile Include="Global\GenericMasterService.cs" />
+    <Compile Include="Finance\LedgerService.cs" />
+    <Compile Include="Global\OfficeMasterService.cs" />
+    <Compile Include="FMS\PMMasterService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FMS\PurchaseOrderService.cs" />
+    <Compile Include="Global\RouteMasterService.cs" />
+    <Compile Include="FMS\RouteTollMapService.cs" />
+    <Compile Include="FMS\MasterAliasService.cs" />
+    <Compile Include="FMS\SpareFitmentPositionService.cs" />
+    <Compile Include="FMS\SpareLogService.cs" />
+    <Compile Include="FMS\SpareMasterService.cs" />
+    <Compile Include="FMS\TollMasterService.cs" />
+    <Compile Include="FMS\TollRateLogService.cs" />
+    <Compile Include="FMS\TripAdvanceLogService.cs" />
+    <Compile Include="FMS\TripExpenseLogService.cs" />
+    <Compile Include="FMS\TyreCheckService.cs" />
+    <Compile Include="FMS\TyreMasterService.cs" />
+    <Compile Include="FMS\TyreRubberTypeService.cs" />
+    <Compile Include="Global\UnitConverterSevice.cs" />
+    <Compile Include="FMS\VehicleBudgetService.cs" />
+    <Compile Include="FMS\VehicleDueMappingService.cs" />
+    <Compile Include="FMS\VehicleFuelBudgetService.cs" />
+    <Compile Include="FMS\VehicleMasterService.cs" />
+    <Compile Include="FMS\VehicleModelService.cs" />
+    <Compile Include="FMS\VehicleMonthlyBudgetService.cs" />
+    <Compile Include="FMS\VehicleMovementLogPickupDropService.cs" />
+    <Compile Include="FMS\VehicleMovementLogService.cs" />
+    <Compile Include="FMS\VehicleOwnerMappingService.cs" />
+    <Compile Include="FMS\VehicleTripSettlementService.cs" />
+    <Compile Include="Finance\VoucherDetailReferenceService.cs" />
+    <Compile Include="Finance\VoucherDetailService.cs" />
+    <Compile Include="FMS\VehicleClassService.cs" />
+    <Compile Include="Finance\VoucherService.cs" />
+    <Compile Include="Finance\VoucherTypeService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFramework.BulkInsert\EntityFramework.BulkInsert.csproj">
+      <Project>{e48ab221-fb79-4f22-9641-3c283f44f1c7}</Project>
+      <Name>EntityFramework.BulkInsert</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityFramework.Extended\EntityFramework.Extended.net45.csproj">
+      <Project>{d390c235-242c-4e92-9e0b-d2463e87b0f0}</Project>
+      <Name>EntityFramework.Extended.net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frameworks\Repository.Pattern.Core\Repository.Pattern.Core.csproj">
+      <Project>{1B1A4B1E-379B-4D04-9CF0-DC67F938FB18}</Project>
+      <Name>Repository.Pattern.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frameworks\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
+      <Project>{F68A1D19-93FB-47C1-A22B-42BEA3E4FD8C}</Project>
+      <Name>Repository.Pattern.Ef6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frameworks\Repository.Pattern\Repository.Pattern.csproj">
+      <Project>{6E682A14-C872-4813-B620-76E108DEA683}</Project>
+      <Name>Repository.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frameworks\Service.Pattern\Service.Pattern\Service.Pattern.csproj">
+      <Project>{7EE200C4-C685-46C1-B7CE-F1F0DCD90772}</Project>
+      <Name>Service.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reporting\TrackoAPI.Reporting.Models\TrackoAPI.Reporting.Models.csproj">
+      <Project>{AF22C9A1-B573-456B-862A-60CD31A7CE07}</Project>
+      <Name>TrackoAPI.Reporting.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tenant\Tenant.csproj">
+      <Project>{85FB5E30-17F9-4FF3-9EC6-4F3E47548EB2}</Project>
+      <Name>Tenant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackApi.Core\TrackoApi.Core.csproj">
+      <Project>{13ED9527-1EAF-40F0-90D1-A3D49B46741B}</Project>
+      <Name>TrackoApi.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Code.Logics\TrackoAPI.Code.Logics.csproj">
+      <Project>{DAEA77E6-5173-4A5A-A59D-E716249510EC}</Project>
+      <Name>TrackoAPI.Code.Logics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoApi.Data\TrackoApi.Data.csproj">
+      <Project>{34749FF1-DF58-4254-8141-430E8DF507CB}</Project>
+      <Name>TrackoApi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoApi.MessageService\TrackoApi.MessageService.csproj">
+      <Project>{DC77947F-7DF3-4FD3-ACE0-3AA54C14DFC2}</Project>
+      <Name>TrackoApi.MessageService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Models.Base\TrackoAPI.Models.Base.csproj">
+      <Project>{b5450530-0097-4b8e-85e0-72419f709e72}</Project>
+      <Name>TrackoAPI.Models.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Models.Shared\TrackoAPI.Models.Shared.csproj">
+      <Project>{0102FE2F-CFC7-4E22-A7D0-78F4B687D2D8}</Project>
+      <Name>TrackoAPI.Models.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoApi.Models\TrackoApi.Models.csproj">
+      <Project>{a821e25e-1255-4f2f-a5a8-bdffbeb7d831}</Project>
+      <Name>TrackoApi.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Reports.ViewModels\TrackoAPI.Reports.ViewModels.csproj">
+      <Project>{69074456-4C50-4480-ADAB-C7F87556F18C}</Project>
+      <Name>TrackoAPI.Reports.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Repository\TrackoAPI.Repository.csproj">
+      <Project>{f62cf426-94d3-4d23-8e52-31f6c334fe6b}</Project>
+      <Name>TrackoAPI.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.ViewModels\TrackoAPI.ViewModels.csproj">
+      <Project>{6CD3A8BA-E883-4718-A88D-310F0A1294CD}</Project>
+      <Name>TrackoAPI.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unity.Config\Unity.Config.csproj">
+      <Project>{cf5f9df4-92ac-46ba-a7f1-acd356d1d381}</Project>
+      <Name>Unity.Config</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Bajaj.Data.Response\TransportersDataResponse_OUT.wsdl" />
+    <None Include="Connected Services\Bajaj.Data\TrackoApi.Service.Bajaj.Data.TransportersData_OUTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Bajaj.Data\TrackoApi.Service.Bajaj.Data.TransportersResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Bajaj.Data\TransportersData_OUT.wsdl" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Bajaj.Data.Response\" />
+    <WCFMetadataStorage Include="Connected Services\Bajaj.Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Bajaj.Data\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Bajaj.Data\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Bajaj.Data\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Bajaj.Data.Response\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Bajaj.Data.Response\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Bajaj.Data.Response\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

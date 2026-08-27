@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Schedule
+{
+    public class Resolver
+    {
+    }
+}

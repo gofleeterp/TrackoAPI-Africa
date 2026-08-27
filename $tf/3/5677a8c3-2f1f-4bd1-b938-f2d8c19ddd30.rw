@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Finance.Config
+{
+    public class Resolver
+    {
+    }
+}

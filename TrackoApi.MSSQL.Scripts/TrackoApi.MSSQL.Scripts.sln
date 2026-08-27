@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackoApi.MSSQL.Scripts", "TrackoApi.MSSQL.Scripts.csproj", "{257ADBD8-0335-4662-90E4-28D82FA010B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{257ADBD8-0335-4662-90E4-28D82FA010B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257ADBD8-0335-4662-90E4-28D82FA010B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257ADBD8-0335-4662-90E4-28D82FA010B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257ADBD8-0335-4662-90E4-28D82FA010B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C7FA09E-F85D-4757-8564-D85F1CF15913}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://iwlt.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TrackoApi.MSSQL.Scripts.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal

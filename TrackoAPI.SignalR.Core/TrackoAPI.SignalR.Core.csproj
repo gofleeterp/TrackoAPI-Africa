@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.SignalR.Core" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrackoAPI.Models.Base\TrackoAPI.Models.Base.csproj" />
+    <ProjectReference Include="..\TrackoAPI.Models.Shared\TrackoAPI.Models.Shared.csproj" />
+    <ProjectReference Include="..\TrackoApi.Models\TrackoApi.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Fleet.Repairs
+{
+    public class Resolver
+    {
+    }
+}

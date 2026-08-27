@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Booking.CN
+{
+    public class Resolver
+    {
+    }
+}

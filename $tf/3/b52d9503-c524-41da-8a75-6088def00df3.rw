@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Presenters.Administration
+{
+    public class Resolver
+    {
+    }
+}

@@ -1,0 +1,15 @@
+﻿{
+    "$schema": "http://json-schema.org/schemas/2014-11-01/apiapp.json#",
+  "id": "TrackoAPI",
+    "namespace": "microsoft.com",
+    "gateway": "2015-01-14",
+    "version": "1.0.0",
+    "title": "TrackoAPI",
+  "summary": "",
+  "baseurl": "http://localhost:80/TrackoAPi/",
+    "author": "Mukesh Rebari",
+    "endpoints": {
+        "apiDefinition": "/TrackoApi/swagger/docs/v1",
+        "status": null
+    }
+}

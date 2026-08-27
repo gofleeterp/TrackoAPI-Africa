@@ -1,0 +1,1 @@
+09-04-2025 15:07:34: SMTP Config (decoded): {"SMTPAddress":"smtp.gmail.com","UserName":"erp.gofleet@gmail.com","Password":"pmyb ywli hyma efvj","Port":587,"FromEmail":"no-reply@gofleet.co.in","UseSSL":true,"Timeout":5}

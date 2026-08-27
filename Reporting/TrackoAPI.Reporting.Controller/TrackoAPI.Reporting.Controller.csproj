@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BCE41D2-9F91-43BB-95F7-4318F4AD1752}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrackoAPI.Reporting.Controller</RootNamespace>
+    <AssemblyName>TrackoAPI.Reporting.Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OnPremiseRelease|AnyCPU'">
+    <OutputPath>bin\OnPremiseRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'OnPremiseDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\OnPremiseDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=6.19.0.11114, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.OData.Core.6.19.0\lib\portable-net45+win+wpa81\Microsoft.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=6.19.0.11114, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.OData.Edm.6.19.0\lib\portable-net45+win+wpa81\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=6.19.0.11114, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Spatial.6.19.0\lib\portable-net45+win+wpa81\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.OData, Version=5.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.OData.5.9.0\lib\net45\System.Web.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomReportParametersController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TenantReportsController.cs" />
+    <Compile Include="ReportsRequestPoolController.cs" />
+    <Compile Include="ReportController.cs" />
+    <Compile Include="Resolver.cs" />
+    <Compile Include="UserReportCustomizationsController.cs" />
+    <Compile Include="UserDefinedReportsController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EntityFramework.Extended\EntityFramework.Extended.net45.csproj">
+      <Project>{D390C235-242C-4E92-9E0B-D2463E87B0F0}</Project>
+      <Name>EntityFramework.Extended.net45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frameworks\Repository.Pattern.Core\Repository.Pattern.Core.csproj">
+      <Project>{1b1a4b1e-379b-4d04-9cf0-dc67f938fb18}</Project>
+      <Name>Repository.Pattern.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frameworks\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
+      <Project>{f68a1d19-93fb-47c1-a22b-42bea3e4fd8c}</Project>
+      <Name>Repository.Pattern.Ef6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frameworks\Repository.Pattern\Repository.Pattern.csproj">
+      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
+      <Name>Repository.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frameworks\Service.Pattern\Service.Pattern\Service.Pattern.csproj">
+      <Project>{7EE200C4-C685-46C1-B7CE-F1F0DCD90772}</Project>
+      <Name>Service.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tenant\Tenant.csproj">
+      <Project>{85FB5E30-17F9-4FF3-9EC6-4F3E47548EB2}</Project>
+      <Name>Tenant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackApi.Core\TrackoApi.Core.csproj">
+      <Project>{13ed9527-1eaf-40f0-90d1-a3d49b46741b}</Project>
+      <Name>TrackoApi.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoApi.Data\TrackoApi.Data.csproj">
+      <Project>{34749FF1-DF58-4254-8141-430E8DF507CB}</Project>
+      <Name>TrackoApi.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoAPI.Infrastructure\TrackoAPI.Infrastructure.csproj">
+      <Project>{575F2ACE-595D-49CD-A0DF-0C0C48A99860}</Project>
+      <Name>TrackoAPI.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoAPI.Models.Base\TrackoAPI.Models.Base.csproj">
+      <Project>{B5450530-0097-4B8E-85E0-72419F709E72}</Project>
+      <Name>TrackoAPI.Models.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoAPI.Models.Shared\TrackoAPI.Models.Shared.csproj">
+      <Project>{0102FE2F-CFC7-4E22-A7D0-78F4B687D2D8}</Project>
+      <Name>TrackoAPI.Models.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoApi.Models\TrackoApi.Models.csproj">
+      <Project>{A821E25E-1255-4F2F-A5A8-BDFFBEB7D831}</Project>
+      <Name>TrackoApi.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoAPI.Reports.ViewModels\TrackoAPI.Reports.ViewModels.csproj">
+      <Project>{69074456-4C50-4480-ADAB-C7F87556F18C}</Project>
+      <Name>TrackoAPI.Reports.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoApi.Service\TrackoApi.Service.csproj">
+      <Project>{A12D8A53-AC89-4DF5-B39E-4AEDC3763BA6}</Project>
+      <Name>TrackoApi.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoApi.UnityConfig\TrackoApi.Unity.csproj">
+      <Project>{4ceab10f-7176-445c-ad9f-cf37c765a4de}</Project>
+      <Name>TrackoApi.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrackoAPI.WebUtilities\TrackoAPI.WebUtilities.csproj">
+      <Project>{24ad961a-2a9d-4f70-8f55-e43b727846fb}</Project>
+      <Name>TrackoAPI.WebUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Reporting.Core\TrackoAPI.Reporting.Core.csproj">
+      <Project>{08f8ff9c-9779-46e1-82b1-fe9994d7fd66}</Project>
+      <Name>TrackoAPI.Reporting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackoAPI.Reporting.Models\TrackoAPI.Reporting.Models.csproj">
+      <Project>{AF22C9A1-B573-456B-862A-60CD31A7CE07}</Project>
+      <Name>TrackoAPI.Reporting.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

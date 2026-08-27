@@ -1,0 +1,6 @@
+﻿namespace GOF.ClientUI.Interfaces.Finance.Masters
+{
+    public class Resolver
+    {
+    }
+}

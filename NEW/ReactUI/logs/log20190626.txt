@@ -1,0 +1,184 @@
+2019-06-26 18:52:34.631 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-06-26 18:52:40.234 +05:30 [INF] [36m=== Webpack compilation mode: development ===[0m
+2019-06-26 18:52:40.647 +05:30 [INF] [36m=== Webpack compilation mode: development ===[0m
+2019-06-26 18:52:40.993 +05:30 [INF] Starting type checking service...
+2019-06-26 18:52:40.999 +05:30 [INF] Using 1 worker with 2048MB memory limit
+2019-06-26 18:52:41.174 +05:30 [INF] Starting type checking service...
+2019-06-26 18:52:41.193 +05:30 [INF] Using 1 worker with 2048MB memory limit
+2019-06-26 18:52:53.311 +05:30 [INF] Type checking in progress...
+2019-06-26 18:52:55.889 +05:30 [INF] Type checking in progress...
+2019-06-26 18:52:56.298 +05:30 [INF] webpack built a63a2292514a14089c1e in 14311ms
+2019-06-26 18:52:56.716 +05:30 [INF] [34mi[39m [90m´¢ówdm´¢ú[39m: Hash: a63a2292514a14089c1e
+Version: webpack 4.32.2
+Time: 14311ms
+Built at: 06/26/2019 6:52:55 PM
+             Asset      Size       Chunks                    Chunk Names
+    main-client.js  3.56 MiB  main-client  [emitted]  [big]  main-client
+main-client.js.map  29.9 KiB  main-client  [emitted]         main-client
+Entrypoint main-client [big] = main-client.js main-client.js.map
+2019-06-26 18:52:57.064 +05:30 [INF] [34mi[39m [90m´¢ówdm´¢ú[39m: Compiled successfully.
+2019-06-26 18:52:57.161 +05:30 [INF] No type errors found
+2019-06-26 18:52:57.284 +05:30 [INF] Version: typescript 3.5.1
+2019-06-26 18:52:57.289 +05:30 [INF] Time: 15809ms
+2019-06-26 18:52:57.354 +05:30 [INF] No type errors found
+2019-06-26 18:52:57.358 +05:30 [INF] Version: typescript 3.5.1
+2019-06-26 18:52:57.369 +05:30 [INF] Time: 16200ms
+2019-06-26 18:52:59.276 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/  
+2019-06-26 18:52:59.430 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.MainController.Index (ReactUI)'
+2019-06-26 18:52:59.504 +05:30 [INF] Route matched with {action = "Index", controller = "Main"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReactUI.Controllers.MainController (ReactUI).
+2019-06-26 18:52:59.536 +05:30 [INF] Executing action method ReactUI.Controllers.MainController.Index (ReactUI) - Validation state: "Valid"
+2019-06-26 18:52:59.554 +05:30 [INF] Executed action method ReactUI.Controllers.MainController.Index (ReactUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3.6663ms.
+2019-06-26 18:52:59.612 +05:30 [INF] Executing ViewResult, running view Index.
+2019-06-26 18:53:02.170 +05:30 [INF] Executed ViewResult - view Index executed in 2595.7308000000003ms.
+2019-06-26 18:53:02.190 +05:30 [INF] Executed action ReactUI.Controllers.MainController.Index (ReactUI) in 2680.9673000000003ms
+2019-06-26 18:53:02.197 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.MainController.Index (ReactUI)'
+2019-06-26 18:53:02.218 +05:30 [INF] Request finished in 2948.7746ms 200 text/html; charset=utf-8
+2019-06-26 18:53:03.153 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/main-client.js?v=EhyUoOW0CJIsV1OOafhtPLMsBUq8hVtoyMEjcrUjXvs  
+2019-06-26 18:53:03.233 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.css?v=f-quCl14D-DPeasviVSwrLusD7NUpgjDT84aVGn-XjY  
+2019-06-26 18:53:03.241 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.js?v=H1CxgLVQ_iwKsNnlQRKY5TEyG_FtHcDaKd7V2jmXBQM  
+2019-06-26 18:53:03.348 +05:30 [INF] Sending file. Request path: '/dist/vendor.css'. Physical path: 'E:\TSVS-Mukesh\GOF.Server.SaaS\TrackoAPI\Development\NEW\ReactUI\wwwroot\dist\vendor.css'
+2019-06-26 18:53:03.357 +05:30 [INF] Request finished in 140.0955ms 200 text/css
+2019-06-26 18:53:03.548 +05:30 [INF] Request finished in 404.2894ms 200 application/javascript; charset=UTF-8
+2019-06-26 18:53:04.167 +05:30 [INF] Sending file. Request path: '/dist/vendor.js'. Physical path: 'E:\TSVS-Mukesh\GOF.Server.SaaS\TrackoAPI\Development\NEW\ReactUI\wwwroot\dist\vendor.js'
+2019-06-26 18:53:04.172 +05:30 [INF] Request finished in 931.2812ms 200 application/javascript
+2019-06-26 18:53:04.908 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/__webpack_hmr  
+2019-06-26 18:53:05.259 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/favicon.ico  
+2019-06-26 18:53:05.289 +05:30 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'E:\TSVS-Mukesh\GOF.Server.SaaS\TrackoAPI\Development\NEW\ReactUI\wwwroot\favicon.ico'
+2019-06-26 18:53:05.293 +05:30 [INF] Request finished in 41.4397ms 200 image/x-icon
+2019-06-26 18:53:17.885 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:64099/api/Account/Login application/json;charset=UTF-8 36
+2019-06-26 18:53:17.897 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.AccountController.Login (ReactUI)'
+2019-06-26 18:53:17.950 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ReactUI.Models.LoginModel) on controller ReactUI.Controllers.AccountController (ReactUI).
+2019-06-26 18:53:18.002 +05:30 [INF] Executing action method ReactUI.Controllers.AccountController.Login (ReactUI) - Validation state: "Valid"
+2019-06-26 18:53:18.009 +05:30 [INF] Executed action method ReactUI.Controllers.AccountController.Login (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 4.2981ms.
+2019-06-26 18:53:18.015 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result`1[[ReactUI.Models.ServiceUser, ReactUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-26 18:53:18.030 +05:30 [INF] Executed action ReactUI.Controllers.AccountController.Login (ReactUI) in 72.0096ms
+2019-06-26 18:53:18.033 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.AccountController.Login (ReactUI)'
+2019-06-26 18:53:18.037 +05:30 [INF] Request finished in 177.5318ms 200 application/json; charset=utf-8
+2019-06-26 18:53:26.132 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/api/Person/Search?term=  
+2019-06-26 18:53:26.141 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:26.153 +05:30 [INF] Route matched with {action = "Search", controller = "Person"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(System.String) on controller ReactUI.Controllers.PersonController (ReactUI).
+2019-06-26 18:53:26.166 +05:30 [INF] Executing action method ReactUI.Controllers.PersonController.Search (ReactUI) - Validation state: "Valid"
+2019-06-26 18:53:26.182 +05:30 [INF] Executed action method ReactUI.Controllers.PersonController.Search (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.4004ms.
+2019-06-26 18:53:26.188 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result`1[[System.Collections.Generic.List`1[[ReactUI.Models.PersonModel, ReactUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-26 18:53:26.207 +05:30 [INF] Executed action ReactUI.Controllers.PersonController.Search (ReactUI) in 44.893100000000004ms
+2019-06-26 18:53:26.217 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:26.232 +05:30 [INF] Request finished in 94.7552ms 200 application/json; charset=utf-8
+2019-06-26 18:53:29.202 +05:30 [INF] Request starting HTTP/1.1 PATCH http://localhost:64099/api/Person/1 application/json;charset=UTF-8 46
+2019-06-26 18:53:29.207 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.PersonController.Update (ReactUI)'
+2019-06-26 18:53:29.217 +05:30 [INF] Route matched with {action = "Update", controller = "Person"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(ReactUI.Models.PersonModel) on controller ReactUI.Controllers.PersonController (ReactUI).
+2019-06-26 18:53:29.232 +05:30 [INF] Executing action method ReactUI.Controllers.PersonController.Update (ReactUI) - Validation state: "Valid"
+2019-06-26 18:53:29.240 +05:30 [INF] Executed action method ReactUI.Controllers.PersonController.Update (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 3.0881000000000003ms.
+2019-06-26 18:53:29.243 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result'.
+2019-06-26 18:53:29.248 +05:30 [INF] Executed action ReactUI.Controllers.PersonController.Update (ReactUI) in 27.9498ms
+2019-06-26 18:53:29.252 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.PersonController.Update (ReactUI)'
+2019-06-26 18:53:29.255 +05:30 [INF] Request finished in 64.5457ms 200 application/json; charset=utf-8
+2019-06-26 18:53:36.535 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/api/Person/Search?term=I  
+2019-06-26 18:53:36.540 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:36.547 +05:30 [INF] Route matched with {action = "Search", controller = "Person"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(System.String) on controller ReactUI.Controllers.PersonController (ReactUI).
+2019-06-26 18:53:36.551 +05:30 [INF] Executing action method ReactUI.Controllers.PersonController.Search (ReactUI) - Validation state: "Valid"
+2019-06-26 18:53:36.555 +05:30 [INF] Executed action method ReactUI.Controllers.PersonController.Search (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.2868000000000002ms.
+2019-06-26 18:53:36.562 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result`1[[System.Collections.Generic.List`1[[ReactUI.Models.PersonModel, ReactUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-26 18:53:36.575 +05:30 [INF] Executed action ReactUI.Controllers.PersonController.Search (ReactUI) in 15.0761ms
+2019-06-26 18:53:36.581 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:36.589 +05:30 [INF] Request finished in 48.7718ms 200 application/json; charset=utf-8
+2019-06-26 18:53:39.058 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/api/Person/Search?term=Ihh  
+2019-06-26 18:53:39.061 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:39.065 +05:30 [INF] Route matched with {action = "Search", controller = "Person"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(System.String) on controller ReactUI.Controllers.PersonController (ReactUI).
+2019-06-26 18:53:39.076 +05:30 [INF] Executing action method ReactUI.Controllers.PersonController.Search (ReactUI) - Validation state: "Valid"
+2019-06-26 18:53:39.086 +05:30 [INF] Executed action method ReactUI.Controllers.PersonController.Search (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0201ms.
+2019-06-26 18:53:39.089 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result`1[[System.Collections.Generic.List`1[[ReactUI.Models.PersonModel, ReactUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-26 18:53:39.104 +05:30 [INF] Executed action ReactUI.Controllers.PersonController.Search (ReactUI) in 24.497700000000002ms
+2019-06-26 18:53:39.110 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:39.123 +05:30 [INF] Request finished in 53.5467ms 200 application/json; charset=utf-8
+2019-06-26 18:53:48.234 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:64099/api/Person/Add application/json;charset=UTF-8 49
+2019-06-26 18:53:48.253 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.PersonController.Add (ReactUI)'
+2019-06-26 18:53:48.269 +05:30 [INF] Route matched with {action = "Add", controller = "Person"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Add(ReactUI.Models.PersonModel) on controller ReactUI.Controllers.PersonController (ReactUI).
+2019-06-26 18:53:48.274 +05:30 [INF] Executing action method ReactUI.Controllers.PersonController.Add (ReactUI) - Validation state: "Valid"
+2019-06-26 18:53:48.285 +05:30 [INF] Executed action method ReactUI.Controllers.PersonController.Add (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 7.6781000000000006ms.
+2019-06-26 18:53:48.287 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-26 18:53:48.293 +05:30 [INF] Executed action ReactUI.Controllers.PersonController.Add (ReactUI) in 21.136300000000002ms
+2019-06-26 18:53:48.299 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.PersonController.Add (ReactUI)'
+2019-06-26 18:53:48.303 +05:30 [INF] Request finished in 73.0384ms 200 application/json; charset=utf-8
+2019-06-26 18:53:57.752 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/api/Person/Search?term=  
+2019-06-26 18:53:57.758 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:57.762 +05:30 [INF] Route matched with {action = "Search", controller = "Person"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(System.String) on controller ReactUI.Controllers.PersonController (ReactUI).
+2019-06-26 18:53:57.764 +05:30 [INF] Executing action method ReactUI.Controllers.PersonController.Search (ReactUI) - Validation state: "Valid"
+2019-06-26 18:53:57.767 +05:30 [INF] Executed action method ReactUI.Controllers.PersonController.Search (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0092ms.
+2019-06-26 18:53:57.770 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result`1[[System.Collections.Generic.List`1[[ReactUI.Models.PersonModel, ReactUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-26 18:53:57.774 +05:30 [INF] Executed action ReactUI.Controllers.PersonController.Search (ReactUI) in 9.6485ms
+2019-06-26 18:53:57.782 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:53:57.788 +05:30 [INF] Request finished in 32.6643ms 200 application/json; charset=utf-8
+2019-06-26 18:54:02.577 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/  
+2019-06-26 18:54:02.581 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.MainController.Index (ReactUI)'
+2019-06-26 18:54:02.584 +05:30 [INF] Route matched with {action = "Index", controller = "Main"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReactUI.Controllers.MainController (ReactUI).
+2019-06-26 18:54:02.589 +05:30 [INF] Executing action method ReactUI.Controllers.MainController.Index (ReactUI) - Validation state: "Valid"
+2019-06-26 18:54:02.595 +05:30 [INF] Executed action method ReactUI.Controllers.MainController.Index (ReactUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.0292000000000001ms.
+2019-06-26 18:54:02.603 +05:30 [INF] Executing ViewResult, running view Index.
+2019-06-26 18:54:02.717 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.css?v=f-quCl14D-DPeasviVSwrLusD7NUpgjDT84aVGn-XjY  
+2019-06-26 18:54:02.742 +05:30 [INF] The file /dist/vendor.css was not modified
+2019-06-26 18:54:02.748 +05:30 [INF] Executed ViewResult - view Index executed in 146.78470000000002ms.
+2019-06-26 18:54:02.752 +05:30 [INF] Executed action ReactUI.Controllers.MainController.Index (ReactUI) in 163.85590000000002ms
+2019-06-26 18:54:02.759 +05:30 [INF] Request finished in 48.7649ms 304 text/css
+2019-06-26 18:54:02.762 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.MainController.Index (ReactUI)'
+2019-06-26 18:54:02.787 +05:30 [INF] Request finished in 195.8227ms 200 text/html; charset=utf-8
+2019-06-26 18:54:02.801 +05:30 [INF] Request finished in 57985.6255ms 200 text/event-stream; charset=utf-8
+2019-06-26 18:54:02.827 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.js?v=H1CxgLVQ_iwKsNnlQRKY5TEyG_FtHcDaKd7V2jmXBQM  
+2019-06-26 18:54:02.842 +05:30 [INF] The file /dist/vendor.js was not modified
+2019-06-26 18:54:02.850 +05:30 [INF] Request finished in 19.4719ms 304 application/javascript
+2019-06-26 18:54:02.875 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/main-client.js?v=EhyUoOW0CJIsV1OOafhtPLMsBUq8hVtoyMEjcrUjXvs  
+2019-06-26 18:54:03.072 +05:30 [INF] Request finished in 214.5833ms 200 application/javascript; charset=UTF-8
+2019-06-26 18:54:03.780 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/__webpack_hmr  
+2019-06-26 18:54:08.340 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.js.map  
+2019-06-26 18:54:08.342 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/main-client.js.map  
+2019-06-26 18:54:08.588 +05:30 [INF] Request finished in 30.2562ms 200 application/json; charset=UTF-8
+2019-06-26 18:54:08.607 +05:30 [INF] Sending file. Request path: '/dist/vendor.js.map'. Physical path: 'E:\TSVS-Mukesh\GOF.Server.SaaS\TrackoAPI\Development\NEW\ReactUI\wwwroot\dist\vendor.js.map'
+2019-06-26 18:54:08.615 +05:30 [INF] Request finished in 275.1807ms 200 text/plain
+2019-06-26 18:54:09.278 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.css.map  
+2019-06-26 18:54:09.306 +05:30 [INF] Sending file. Request path: '/dist/vendor.css.map'. Physical path: 'E:\TSVS-Mukesh\GOF.Server.SaaS\TrackoAPI\Development\NEW\ReactUI\wwwroot\dist\vendor.css.map'
+2019-06-26 18:54:09.311 +05:30 [INF] Request finished in 33.3478ms 200 text/plain
+2019-06-26 18:54:35.339 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/api/Person/Search?term=  
+2019-06-26 18:54:35.342 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:54:35.346 +05:30 [INF] Route matched with {action = "Search", controller = "Person"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Search(System.String) on controller ReactUI.Controllers.PersonController (ReactUI).
+2019-06-26 18:54:35.351 +05:30 [INF] Executing action method ReactUI.Controllers.PersonController.Search (ReactUI) - Validation state: "Valid"
+2019-06-26 18:54:35.355 +05:30 [INF] Executed action method ReactUI.Controllers.PersonController.Search (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.0083ms.
+2019-06-26 18:54:35.360 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result`1[[System.Collections.Generic.List`1[[ReactUI.Models.PersonModel, ReactUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-26 18:54:35.378 +05:30 [INF] Executed action ReactUI.Controllers.PersonController.Search (ReactUI) in 15.6464ms
+2019-06-26 18:54:35.425 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.PersonController.Search (ReactUI)'
+2019-06-26 18:54:35.492 +05:30 [INF] Request finished in 87.7903ms 200 application/json; charset=utf-8
+2019-06-26 18:54:39.619 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:64099/api/Account/Logout  0
+2019-06-26 18:54:39.624 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.AccountController.Logout (ReactUI)'
+2019-06-26 18:54:39.632 +05:30 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Logout() on controller ReactUI.Controllers.AccountController (ReactUI).
+2019-06-26 18:54:39.636 +05:30 [INF] Executing action method ReactUI.Controllers.AccountController.Logout (ReactUI) - Validation state: "Valid"
+2019-06-26 18:54:39.641 +05:30 [INF] Executed action method ReactUI.Controllers.AccountController.Logout (ReactUI), returned result Microsoft.AspNetCore.Mvc.JsonResult in 3.0138000000000003ms.
+2019-06-26 18:54:39.645 +05:30 [INF] Executing JsonResult, writing value of type 'ReactUI.Infrastructure.Result'.
+2019-06-26 18:54:39.651 +05:30 [INF] Executed action ReactUI.Controllers.AccountController.Logout (ReactUI) in 13.997ms
+2019-06-26 18:54:39.655 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.AccountController.Logout (ReactUI)'
+2019-06-26 18:54:39.663 +05:30 [INF] Request finished in 38.8798ms 200 application/json; charset=utf-8
+2019-06-26 18:54:42.158 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/example  
+2019-06-26 18:54:42.165 +05:30 [INF] Executing endpoint 'ReactUI.Controllers.MainController.Index (ReactUI)'
+2019-06-26 18:54:42.169 +05:30 [INF] Route matched with {action = "Index", controller = "Main"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReactUI.Controllers.MainController (ReactUI).
+2019-06-26 18:54:42.173 +05:30 [INF] Executing action method ReactUI.Controllers.MainController.Index (ReactUI) - Validation state: "Valid"
+2019-06-26 18:54:42.175 +05:30 [INF] Executed action method ReactUI.Controllers.MainController.Index (ReactUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0789ms.
+2019-06-26 18:54:42.185 +05:30 [INF] Executing ViewResult, running view Index.
+2019-06-26 18:54:42.208 +05:30 [INF] Executed ViewResult - view Index executed in 27.117900000000002ms.
+2019-06-26 18:54:42.219 +05:30 [INF] Executed action ReactUI.Controllers.MainController.Index (ReactUI) in 39.296800000000005ms
+2019-06-26 18:54:42.285 +05:30 [INF] Request finished in 38447.6739ms 200 text/event-stream; charset=utf-8
+2019-06-26 18:54:42.289 +05:30 [INF] Executed endpoint 'ReactUI.Controllers.MainController.Index (ReactUI)'
+2019-06-26 18:54:42.300 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.css?v=f-quCl14D-DPeasviVSwrLusD7NUpgjDT84aVGn-XjY  
+2019-06-26 18:54:42.326 +05:30 [INF] Request finished in 144.2775ms 200 text/html; charset=utf-8
+2019-06-26 18:54:42.335 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.js?v=H1CxgLVQ_iwKsNnlQRKY5TEyG_FtHcDaKd7V2jmXBQM  
+2019-06-26 18:54:42.343 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/main-client.js?v=EhyUoOW0CJIsV1OOafhtPLMsBUq8hVtoyMEjcrUjXvs  
+2019-06-26 18:54:42.355 +05:30 [INF] The file /dist/vendor.css was not modified
+2019-06-26 18:54:42.379 +05:30 [INF] Request finished in 66.0451ms 304 text/css
+2019-06-26 18:54:42.387 +05:30 [INF] The file /dist/vendor.js was not modified
+2019-06-26 18:54:42.425 +05:30 [INF] Request finished in 67.8369ms 304 application/javascript
+2019-06-26 18:54:42.437 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.css.map  
+2019-06-26 18:54:42.559 +05:30 [INF] The file /dist/vendor.css.map was not modified
+2019-06-26 18:54:42.568 +05:30 [INF] Request finished in 127.5146ms 304 text/plain
+2019-06-26 18:54:42.656 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/vendor.js.map  
+2019-06-26 18:54:42.672 +05:30 [INF] Request finished in 328.8367ms 200 application/javascript; charset=UTF-8
+2019-06-26 18:54:42.719 +05:30 [INF] The file /dist/vendor.js.map was not modified
+2019-06-26 18:54:42.731 +05:30 [INF] Request finished in 70.6369ms 304 text/plain
+2019-06-26 18:54:43.543 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/main-client.js.map  
+2019-06-26 18:54:43.553 +05:30 [INF] Request finished in 64.467ms 200 application/json; charset=UTF-8
+2019-06-26 18:54:43.836 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:64099/dist/__webpack_hmr  
